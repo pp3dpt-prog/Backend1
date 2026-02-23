@@ -99,4 +99,4 @@ difference() {
 });
 
 const PORT = process.env.PORT || 10000;
-app.listen(PORT, () => console.log(`Servidor a correr na porta ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`Servidor a correr na porta ${PORT}`));
