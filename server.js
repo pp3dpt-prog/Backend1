@@ -51,7 +51,8 @@ app.post('/gerar-tag', async (req, res) => {
 $fn=60;
 difference() {
     union() {
-        import("templates/${nomeTemplate}.stl");
+        // Usando path.join para garantir o caminho correto no Linux
+        import("${path.join(__dirname, 'templates', nomeTemplate + '.stl').replace(/\\/g, '/')}");
         
         translate([0, ${yNome}, 2]) linear_extrude(0.8)
             text("${nome}", size=${tamFonte}, halign="center", valign="center", font="Liberation Sans:style=Bold");
