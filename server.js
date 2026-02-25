@@ -29,7 +29,7 @@ app.post('/gerar-tag', async (req, res) => {
     const yVerso = (forma === 'coracao') ? 6 : 0;
     
     // Pequeno ajuste: garantir que 'S' ou 's' funciona na lógica
-    const tamFonte = (tamanho.toLowerCase() === 's') ? 4 : 8;
+    const tamFonte = (tamanho.toLowerCase() === 's') ? 4 : 5;
     const tamFonteVerso = (tamanho.toLowerCase() === 's') ? 3 : 3;
 
     const logoNFC = `
