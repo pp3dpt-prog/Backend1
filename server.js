@@ -29,8 +29,9 @@ app.post('/gerar-tag', async (req, res) => {
     const yVerso = (forma === 'coracao') ? 6 : 0;
     
     // Pequeno ajuste: garantir que 'S' ou 's' funciona na lógica
-    const tamFonte = (tamanho.toLowerCase() === 's') ? 4 : 5;
-    const tamFonteVerso = (tamanho.toLowerCase() === 's') ? 3 : 3;
+    const tamFonte = (tamanho.toLowerCase() === 's') ? 4 : 8;
+    const tamFonteVerso = (tamanho.toLowerCase() === 's') ? 3 : 5;
+   
 
     const logoNFC = `
         translate([0, 2, 0]) linear_extrude(1.2) {
@@ -56,11 +57,11 @@ difference() {
         import("${path.join(__dirname, 'templates', nomeTemplate + '.stl').replace(/\\/g, '/')}");
         
         translate([0, ${yNome}, 2]) linear_extrude(0.8)
-            text("${nome}", size=${tamFonte}, halign="center", valign="center", font="Liberation Sans:style=Bold");
+            text("${nome}", size=${YtamFonteVerso}, halign="center", valign="center", font="Liberation Sans:style=Bold");
     }
     
     translate([0, ${yVerso}, -2.1]) mirror([1,0,0]) {
-        ${temNFC ? logoNFC : `linear_extrude(1.2) text("${telefone}", size=${tamFonte}, halign="center", valign="center", font="Liberation Sans:style=Bold");`}
+        ${temNFC ? logoNFC : `linear_extrude(1.2) text("${telefone}", size=${tamFonteVerso}, halign="center", valign="center", font="Liberation Sans:style=Bold");`}
     }
 }`;
 
