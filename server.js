@@ -60,7 +60,7 @@ difference() {
     }
     
     translate([0, ${yVerso}, -2.1]) mirror([1,0,0]) {
-        ${temNFC ? logoNFC : `linear_extrude(1.2) text("${telefone}", size=4.5, halign="center", valign="center", font="Liberation Sans:style=Bold");`}
+        ${temNFC ? logoNFC : `linear_extrude(1.2) text("${telefone}", size=${tamFonteVerso}, halign="center", valign="center", font="Liberation Sans:style=Bold");`}
     }
 }`;
 
