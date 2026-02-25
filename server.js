@@ -30,6 +30,7 @@ app.post('/gerar-tag', async (req, res) => {
     
     // Pequeno ajuste: garantir que 'S' ou 's' funciona na lógica
     const tamFonte = (tamanho.toLowerCase() === 's') ? 4 : 8;
+    const tamFonteVerso = (tamanho.toLowerCase() === 's') ? 3.5 : 4.5;
 
     const logoNFC = `
         translate([0, 2, 0]) linear_extrude(1.2) {
