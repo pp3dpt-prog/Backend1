@@ -57,7 +57,7 @@ difference() {
         import("${path.join(__dirname, 'templates', nomeTemplate + '.stl').replace(/\\/g, '/')}");
         
         translate([0, ${yNome}, 2]) linear_extrude(0.8)
-            text("${nome}", size=${YtamFonteVerso}, halign="center", valign="center", font="Liberation Sans:style=Bold");
+            text("${nome}", size=${tamFonte}, halign="center", valign="center", font="Liberation Sans:style=Bold");
     }
     
     translate([0, ${yVerso}, -2.1]) mirror([1,0,0]) {
